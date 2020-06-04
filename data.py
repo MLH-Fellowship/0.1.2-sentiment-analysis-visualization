@@ -15,5 +15,9 @@ class Dataset:
             )
 
         train, test = self.data
-        self.X_train, self.Y_train = train
-        self.X_test, self.Y_test = test
+        X_train, self.Y_train = train
+        X_test, self.Y_test = test
+
+        # pad inputs
+        self.X_train = sequence.pad_sequences(X_train, maxlen=self.MAX_SEQ_LEN)
+        self.X_test = sequence.pad_sequences(X_test, maxlen=self.MAX_SEQ_LEN)
