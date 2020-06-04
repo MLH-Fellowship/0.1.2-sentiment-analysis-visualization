@@ -39,3 +39,7 @@ Trainable params: 146,945
 Non-trainable params: 0
 _________________________________________________________________
 ```
+## Installation for local environment
+* Install BentoML
+* Install Docker 
+  * if using Windows, will need Docker Desktop Edge available through Windows inside program. Must install a WSL distribution of Linux. We used "Remote WSL extension" in VSCode. 
