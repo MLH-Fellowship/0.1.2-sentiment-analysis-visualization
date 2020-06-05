@@ -3,12 +3,12 @@
 A web-app the helps to visualize a word-by-word breakdown of how sentiment analysis classifies text
 
 ## major goals
-[x] Research and decide on a machine learning model/architecture
-[x] Pick out 2-3 datasets we can use to train
-[x] Build a training pipeline
-[x] Train and implement the model
-[x] Serve the model using BentoML as an API
-[] Create a web app to take in input and visualize the output
+- [x] Research and decide on a machine learning model/architecture
+- [x] Pick out 2-3 datasets we can use to train
+- [x] Build a training pipeline
+- [x] Train and implement the model
+- [x] Serve the model using BentoML as an API
+- [ ] Create a web app to take in input and visualize the output
 
 ## calling the api
 Our endpoint is at https://sentiment-classifier-gy7t3p45oq-uc.a.run.app/
