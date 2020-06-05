@@ -21,7 +21,7 @@ A web-app that helps to visualize a word-by-word breakdown of how sentiment anal
 - [x] Build a training pipeline
 - [x] Train and implement the model
 - [x] Serve the model using BentoML as an API
-- [ ] Create a web app to take in input and visualize the output
+- [x] Create a web app to take in input and visualize the output
 
 -------
 
