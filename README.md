@@ -4,20 +4,22 @@
   [![Status](https://img.shields.io/badge/status-active-success.svg)]()
   [![GitHub Issues](https://img.shields.io/github/issues/MLH-Fellowship/0.1.2-sentiment-analysis-visualization.svg)](https://github.com/MLH-Fellowship/0.1.2-sentiment-analysis-visualization/issues)
   [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/MLH-Fellowship/0.1.2-sentiment-analysis-visualization.svg)](https://github.com/MLH-Fellowship/0.1.2-sentiment-analysis-visualization/pulls)
-  [![License](https://img.shields.io/aur/license/android-studio.svg)]()
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
 
 </div>
 
 -------
 
-## pod 0.1.2
+## Pod 0.1.2
 A web-app the helps to visualize a word-by-word breakdown of how sentiment analysis classifies text
 
 ![Frontend View](https://github.com/MLH-Fellowship/0.1.2-sentiment-analysis-visualization/blob/master/frontend.png)
 
 -------
 
-## major goals
+## Major goals
 - [x] Research and decide on a machine learning model/architecture
 - [x] Pick out 2-3 datasets we can use to train
 - [x] Build a training pipeline
@@ -27,7 +29,7 @@ A web-app the helps to visualize a word-by-word breakdown of how sentiment analy
 
 -------
 
-## calling the api
+## Calling the api
 Our endpoint is at https://sentiment-classifier-gy7t3p45oq-uc.a.run.app/
 Our prediction endpoint can be accessed through making a `POST` request to `https://sentiment-classifier-gy7t3p45oq-uc.a.run.app/predict`.
 
@@ -61,7 +63,7 @@ This will replace the current model in `/model`. `model.json` stores the model a
 
 -------
 
-## packaging it with bentoML
+## Packaging it with bentoML
 BentoML helps us to easily serve our Keras model through an API. You can package a new API by running 
 
 ```python
@@ -103,7 +105,7 @@ Then, visit `localhost:5000` to see the BentoML server!
 
 -------
 
-## simple deep LSTM architecture
+## Simple deep LSTM architecture
 ```python
 > model.summary()
 _________________________________________________________________
@@ -133,7 +135,7 @@ _________________________________________________________________
 
 -------
 
-## data and training process
+## Data and training process
 * 85% / 15% train-test split
 * dataset is balanced (25k positive, 25k negative)
 * RMSProp with 1e-3 Learning Rate and early stopping with patience of 2 epochs
