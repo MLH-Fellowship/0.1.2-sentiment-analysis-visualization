@@ -1,6 +1,4 @@
-# sentiment analysis visualization
-
--------
+# Sentiment Analysis Visualization
 <div>
   
   [![Status](https://img.shields.io/badge/status-active-success.svg)]()
@@ -15,7 +13,7 @@
 ## pod 0.1.2
 A web-app the helps to visualize a word-by-word breakdown of how sentiment analysis classifies text
 
-![Front end view](https://github.com/MLH-Fellowship/0.1.2-sentiment-analysis-visualization/blob/master/images/frontend.png)
+![Frontend View](https://github.com/MLH-Fellowship/0.1.2-sentiment-analysis-visualization/blob/master/frontend.png)
 
 -------
 
