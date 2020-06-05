@@ -1,14 +1,10 @@
 # Sentiment Analysis Visualization
-<div>
   
-  [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-  [![GitHub Issues](https://img.shields.io/github/issues/MLH-Fellowship/0.1.2-sentiment-analysis-visualization.svg)](https://github.com/MLH-Fellowship/0.1.2-sentiment-analysis-visualization/issues)
-  [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/MLH-Fellowship/0.1.2-sentiment-analysis-visualization.svg)](https://github.com/MLH-Fellowship/0.1.2-sentiment-analysis-visualization/pulls)
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Status](https://img.shields.io/badge/status-active-success.svg)]()
+[![GitHub Issues](https://img.shields.io/github/issues/MLH-Fellowship/0.1.2-sentiment-analysis-visualization.svg)](https://github.com/MLH-Fellowship/0.1.2-sentiment-analysis-visualization/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/MLH-Fellowship/0.1.2-sentiment-analysis-visualization.svg)](https://github.com/MLH-Fellowship/0.1.2-sentiment-analysis-visualization/pulls)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-
-
-</div>
 
 -------
 
