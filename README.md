@@ -52,7 +52,7 @@ If successful, you should get a `200 OK` status and a body with something along 
 
 -------
 
-## training a new model
+## Training a new model
 Currently, we have only implemented a training pipeline for the IMDB dataset but this is subject to change in the future. You can train a new classifier on the dataset by doing 
 
 ```bash
