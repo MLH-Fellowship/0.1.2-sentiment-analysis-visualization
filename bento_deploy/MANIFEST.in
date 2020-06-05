@@ -1,0 +1,2 @@
+include SentimentClassifierService/bentoml.yml
+graft SentimentClassifierService/artifacts

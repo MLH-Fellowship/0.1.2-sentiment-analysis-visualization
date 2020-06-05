@@ -1,5 +1,5 @@
-from keras.preprocessing import sequence
-from keras.preprocessing.text import Tokenizer
+from tensorflow.keras.preprocessing import sequence
+from tensorflow.keras.preprocessing.text import Tokenizer
 import pandas as pd
 import string
 from sklearn.preprocessing import LabelEncoder
@@ -55,5 +55,6 @@ class Dataset:
         self.X_test = self.tokenizer.texts_to_sequences(self.X_test)
 
     def pad(self):
-        self.X_train = sequence.pad_sequences(self.X_train, maxlen=self.MAX_SEQ_LEN)
-        self.X_test = sequence.pad_sequences(self.X_test, maxlen=self.MAX_SEQ_LEN)
+        self.X_train = sequence.pad_sequences(self.X_train, maxlen=self.MAX_SEQ_LEN, padding="post")
+        self.X_test = sequence.pad_sequences(
+            self.X_test, maxlen=self.MAX_SEQ_LEN, padding="post")
