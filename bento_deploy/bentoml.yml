@@ -1,0 +1,32 @@
+version: 0.7.8
+kind: BentoService
+metadata:
+  created_at: 2020-06-05 01:55:32.335815
+  service_name: SentimentClassifierService
+  service_version: 20200604185521_8B7326
+  module_name: bento_service
+  module_file: bento_service.py
+env:
+  pip_dependencies:
+  - tensorflow
+  - bentoml==0.7.8
+  conda_env:
+    name: bentoml-SentimentClassifierService
+    channels:
+    - defaults
+    dependencies:
+    - python=3.7.4
+    - pip
+  python_version: 3.7.4
+  docker_base_image: continuumio/miniconda3:4.8.2
+apis:
+- name: predict
+  docs: BentoService API
+  handler_type: JsonHandler
+  handler_config:
+    is_batch_input: false
+artifacts:
+- name: model
+  artifact_type: KerasModelArtifact
+- name: tokenizer
+  artifact_type: PickleArtifact

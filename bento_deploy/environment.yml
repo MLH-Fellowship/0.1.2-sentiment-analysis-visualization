@@ -1,0 +1,6 @@
+name: bentoml-SentimentClassifierService
+channels:
+- defaults
+dependencies:
+- python=3.7.4
+- pip

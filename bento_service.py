@@ -1,8 +1,12 @@
 from bentoml import api, env, BentoService, artifacts
 from bentoml.artifact import KerasModelArtifact, PickleArtifact
 from bentoml.handlers import JsonHandler
+from tensorflow.keras.preprocessing import sequence, text
+import data
+import json
 
-max_features = 1000
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 
 @artifacts([
     KerasModelArtifact('model'),
@@ -11,25 +15,19 @@ max_features = 1000
 class SentimentClassifierService(BentoService):
 
     def word_to_index(self, word):
-        if word in self.artifacts.word_index and self.artifacts.word_index[word] <= max_features:
-            return self.artifacts.word_index[word]
+        if word in self.artifacts.tokenizer and self.artifacts.tokenizer[word] <= 5000:
+            return self.artifacts.tokenizer[word]
         else:
-            return self.artifacts.word_index["<UNK>"]
+            return self.artifacts.tokenizer["<OOV>"]
 
     def preprocessing(self, text_str):
-        sequence = text.text_to_word_sequence(text_str)
-        return list(map(self.word_to_index, sequence))
+        proc = text.text_to_word_sequence(data.preprocess(text_str))
+        tokens = list(map(self.word_to_index, proc))
+        return tokens
 
     @api(JsonHandler)
     def predict(self, parsed_json):
-        if type(parsed_json) == list:
-            input_data = list(map(self.preprocessing, parsed_json))
-        else:  # expecting type(parsed_json) == dict:
-            input_data = [self.preprocessing(parsed_json['text'])]
-
-        input_data = sequence.pad_sequences(input_data,
-                                            value=self.artifacts.word_index["<PAD>"],
-                                            padding='post',
-                                            maxlen=80)
-
-        return self.artifacts.model.predict_classes(input_data)
+        # single pred
+        input_data = [self.preprocessing(parsed_json['text'])]
+        input_data = sequence.pad_sequences(input_data, maxlen=100, padding="post")
+        return self.artifacts.model.predict(input_data, verbose=1)
