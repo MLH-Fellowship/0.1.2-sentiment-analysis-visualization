@@ -11,7 +11,7 @@
 ## Pod 0.1.2
 A web-app that helps to visualize a word-by-word breakdown of how sentiment analysis classifies text
 
-![Frontend View](https://github.com/MLH-Fellowship/0.1.2-sentiment-analysis-visualization/blob/master/frontend.png)
+![Frontend View](https://user-images.githubusercontent.com/23178940/83907584-858fbf00-a71a-11ea-8476-7445c0e16ffe.png)
 
 -------
 
