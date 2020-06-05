@@ -32,23 +32,23 @@ class Dataset:
             X = df.X
             Y = df.Y
 
-            # encode labels
-            label_encoder = LabelEncoder()
-            Y = label_encoder.fit_transform(Y)
-            Y = Y.reshape(-1, 1)
+        # encode labels
+        label_encoder = LabelEncoder()
+        Y = label_encoder.fit_transform(Y)
+        Y = Y.reshape(-1, 1)
 
-            # 15/85 train test split
-            self.X_train, self.X_test, self.Y_train, self.Y_test = train_test_split(X, Y, test_size=0.15)
+        # 15/85 train test split
+        self.X_train, self.X_test, self.Y_train, self.Y_test = train_test_split(X, Y, test_size=0.15)
 
-            self.tokenizer = Tokenizer(
-                num_words=self.VOCAB_SIZE, oov_token="<OOV>")
-            self.tokenizer.fit_on_texts(self.X_train)
+        self.tokenizer = Tokenizer(
+            num_words=self.VOCAB_SIZE, oov_token="<OOV>")
+        self.tokenizer.fit_on_texts(self.X_train)
 
-            self.tokenize()
-            self.pad()
+        self.tokenize()
+        self.pad()
 
-            print(self.X_train[:30])
-            print(self.Y_train[:30])
+        print(self.X_train[:30])
+        print(self.Y_train[:30])
 
     def tokenize(self):
         self.X_train = self.tokenizer.texts_to_sequences(self.X_train)
