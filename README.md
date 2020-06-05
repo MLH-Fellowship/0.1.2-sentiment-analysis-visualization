@@ -1,6 +1,23 @@
 # sentiment analysis visualization
+
+-------
+<div>
+  
+  [![Status](https://img.shields.io/badge/status-active-success.svg)]()
+  [![GitHub Issues](https://img.shields.io/github/issues/MLH-Fellowship/0.1.2-sentiment-analysis-visualization.svg)](https://github.com/MLH-Fellowship/0.1.2-sentiment-analysis-visualization/issues)
+  [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/MLH-Fellowship/0.1.2-sentiment-analysis-visualization.svg)](https://github.com/MLH-Fellowship/0.1.2-sentiment-analysis-visualization/pulls)
+  [![License](https://img.shields.io/aur/license/android-studio.svg)]()
+
+</div>
+
+-------
+
 ## pod 0.1.2
 A web-app the helps to visualize a word-by-word breakdown of how sentiment analysis classifies text
+
+![Front end view](https://github.com/MLH-Fellowship/0.1.2-sentiment-analysis-visualization/blob/master/images/frontend.png)
+
+-------
 
 ## major goals
 - [x] Research and decide on a machine learning model/architecture
@@ -9,6 +26,8 @@ A web-app the helps to visualize a word-by-word breakdown of how sentiment analy
 - [x] Train and implement the model
 - [x] Serve the model using BentoML as an API
 - [ ] Create a web app to take in input and visualize the output
+
+-------
 
 ## calling the api
 Our endpoint is at https://sentiment-classifier-gy7t3p45oq-uc.a.run.app/
@@ -30,6 +49,9 @@ Basically, make sure to set the content type to JSON and send a JSON in the form
 
 If successful, you should get a `200 OK` status and a body with something along the lines of `[[0.8614905476570129], [0.7018478512763977], [0.617088258266449]]` where each entry represents the sentiment from 0 (negative) to 1 (positive) of each word.
 
+
+-------
+
 ## training a new model
 Currently, we have only implemented a training pipeline for the IMDB dataset but this is subject to change in the future. You can train a new classifier on the dataset by doing 
 
@@ -37,6 +59,9 @@ Currently, we have only implemented a training pipeline for the IMDB dataset but
 python train.py
 ```
 This will replace the current model in `/model`. `model.json` stores the model architecture, `weights.h5` stores trained weights, and `tokenizer.json` stores word indices.
+
+
+-------
 
 ## packaging it with bentoML
 BentoML helps us to easily serve our Keras model through an API. You can package a new API by running 
@@ -77,6 +102,9 @@ docker run -p 5000:5000 bento-classifier:latest
 
 Then, visit `localhost:5000` to see the BentoML server!
 
+
+-------
+
 ## simple deep LSTM architecture
 ```python
 > model.summary()
@@ -104,6 +132,8 @@ Trainable params: 402,945
 Non-trainable params: 0
 _________________________________________________________________
 ```
+
+-------
 
 ## data and training process
 * 85% / 15% train-test split
