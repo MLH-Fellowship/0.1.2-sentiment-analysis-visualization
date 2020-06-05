@@ -1,3 +1,5 @@
+// colourText(text, sentiment) 
+// Takes in some text input string and the output from the neural network, and adds some coloured text to the page
 function colourText(text, sentiment) {
     const words = text.split(" ")
     const display = document.getElementById("display_area")
@@ -10,6 +12,8 @@ function colourText(text, sentiment) {
     }
 }
 
+// perc2color(perc) 
+// Takes in a number from 0 to 100 and converts that to a hex value from red to green.
 function perc2color(percent) {
     var r, g = 0;
     const b = Math.round((1 - Math.abs(50 - percent)/50) * 255);
