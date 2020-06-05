@@ -33,7 +33,7 @@ function formSubmit(e) {
     e.preventDefault()
     console.log('got form submit event')
     var text = document.getElementById("textarea").value
-    document.getElementById("submitButton").value = "loading..."
+    document.getElementById("submitButton").value = "Loading..."
 
     var xhr = new XMLHttpRequest();
     var url = "https://cors-anywhere.herokuapp.com/https://sentiment-classifier-gy7t3p45oq-uc.a.run.app/predict";
@@ -45,7 +45,7 @@ function formSubmit(e) {
             const resp = xhr.responseText.split(", ").map(s => +s.replace(/[\[\]']+/g, '').replace(/[\[\]']+/g, ''))
             console.log(resp)
             colourText(text, resp)
-            document.getElementById("submitButton").value = "analyze"
+            document.getElementById("submitButton").value = "Analyze!"
         }
     };
     var data = JSON.stringify({ "text": text });
