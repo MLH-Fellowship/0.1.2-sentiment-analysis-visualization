@@ -3,14 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://github.com/MLH-Fellowship/0.1.2-visualization/css" />
+  <link rel="stylesheet" href="index.css" />
 </head>
-
-<!-- STYLE or use stylesheet above -->
-<style>
-# style stuff here
-</style>
-
 
 <!-- BODY --> 
 <body>
@@ -21,11 +15,13 @@
 
    <section>
     <p class='section-head'><strong>Sentiment Analysis Visualizations</strong></p>
-    <select id="text-data-select"></select>
-    <button id="load-text-data">Select a dataset</button>
-    <div>
-      <textarea class="monospace" id="test-text" value="" rows="10"></textarea>
-    </div>
+    <form>
+      <textarea class="monospace" id="textarea" value="" cols="80" rows="20"></textarea>
+      <input type="submit" value="analyze!">
+      <div id="display_area">
+      </div>
+    </form>
   </section>
   
+  <script src="index.js"></script>
 </body>

@@ -1,0 +1,10 @@
+span {
+    margin-right: 5px;
+    padding: 0.1em;
+    border-radius: 3px;
+}
+
+#display_area {
+    max-width: 60vw;
+    word-wrap: break-word;
+}
