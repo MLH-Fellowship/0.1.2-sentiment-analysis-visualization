@@ -1,2 +1,3 @@
-tensorflow
+tensorflow==2.1.0
+sklearn
 bentoml==0.7.8

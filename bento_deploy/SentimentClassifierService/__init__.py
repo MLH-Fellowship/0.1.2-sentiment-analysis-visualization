@@ -11,7 +11,7 @@ from bentoml.utils.log import configure_logging
 # --verbose CLI option, user can change the CLI output behavior
 configure_logging(logging.ERROR)
 
-__VERSION__ = "20200604185521_8B7326"
+__VERSION__ = "20200604194632_749C26"
 
 __module_path = os.path.abspath(os.path.dirname(__file__))
 

@@ -1,5 +1,5 @@
-from keras.preprocessing import sequence
-from keras.preprocessing.text import Tokenizer
+from tensorflow.keras.preprocessing import sequence
+from tensorflow.keras.preprocessing.text import Tokenizer
 import pandas as pd
 import string
 from sklearn.preprocessing import LabelEncoder

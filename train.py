@@ -1,8 +1,8 @@
 import LSTM
 import data
 import json
-from keras.optimizers import RMSprop
-from keras.callbacks import EarlyStopping
+from tensorflow.keras.optimizers import RMSprop
+from tensorflow.keras.callbacks import EarlyStopping
 
 VOCAB_SIZE = 5000
 MAX_SEQ_LEN = 100
